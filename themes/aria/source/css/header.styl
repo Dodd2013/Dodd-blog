@@ -1,0 +1,123 @@
+@import 'variables';
+@import 'nib';
+
+.header {
+  padding-bottom: $search-height;
+  margin-bottom: 0;
+  background: $color-header-background;
+  color: $color-header-font;
+
+  .search {
+    height: $search-height - $search-padding-top;
+    display: block;
+    text-align: center;
+    background: $color-search-background;
+    color: $color-search-font;
+    padding-top: $search-padding-top;
+
+    input {
+      width: 70%;
+      height: 1.8em;
+      border: none;
+      border-bottom: 0.1em dotted $color-search-font;
+      background: $color-search-background;
+      color: $color-search-font;
+      transition: 0.3s ease-in-out;
+
+      &:focus {
+        outline: none;
+        border-bottom: 0.1em solid $color-search-font;
+      }
+
+      &::placeholder {
+        color: $color-search-font;
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .search-result-box {
+    background: $color-card-background;
+    word-wrap: break-word;
+    transition: 0.3s ease-in-out;
+
+    .search-result-list {
+      margin-top: 0;
+      padding: 1em 1em 1em 2em;
+    }
+
+    &:hover {
+      box-shadow: 0 0.5em 1em 0.5em rgba(0, 0, 0, 0.19);
+    }
+  }
+
+  .header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 1em;
+
+    .header-title {
+      text-align: left;
+      width: 50%;
+      word-wrap: break-word;
+      flex: 1 0 auto;
+      color: $color-title;
+
+      a {
+        color: $color-title;
+        text-decoration: none;
+        border-bottom: none;
+
+        &:hover {
+          color: $color-title;
+          border-bottom: none;
+        }
+
+        &:active {
+          top: 0;
+        }
+      }
+
+      .title {
+        font: bold 2em $font-title;
+        margin: 0 0 0.5em 0;
+      }
+
+      .subtitle {
+        font: italic 1.5em $font-subtitle;
+        margin: 0.5em 0 0 0;
+      }
+    }
+
+    .logo {
+      text-align: right;
+      width: 50%;
+      flex: 1 0 auto;
+
+      img {
+        display: inline-block;
+        max-width: 20em;
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: $media-footer-header-nav-fold-width) {
+    .header-container {
+      flex-direction: column-reverse;
+
+      .header-title {
+        text-align: center;
+        width: auto;
+      }
+
+      .logo {
+        text-align: center;
+        width: auto;
+      }
+    }
+  }
+}
