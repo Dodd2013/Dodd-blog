@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Dodd&#39;s Blog</title>
   
-  <subtitle>就算你怀疑我在开车，你也没有证据</subtitle>
+  <subtitle>Void man(main) without return.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.Dodd2014.com/"/>
-  <updated>2019-05-12T13:21:37.211Z</updated>
+  <updated>2019-05-13T12:56:28.343Z</updated>
   <id>http://blog.Dodd2014.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://blog.Dodd2014.com/2019/05/12/new-blog/"/>
     <id>http://blog.Dodd2014.com/2019/05/12/new-blog/</id>
     <published>2019-05-12T13:20:51.487Z</published>
-    <updated>2019-05-12T13:21:37.211Z</updated>
+    <updated>2019-05-13T12:56:28.343Z</updated>
     
     <summary type="html">
     
@@ -29,27 +29,10 @@
       
         
         
-          &lt;p&gt;新的博客&lt;/p&gt;
+          &lt;p&gt;在某年某月的某一天，你发现了新的世界，欢迎来到我新的个人博客，这里是Dodd，前端咸鱼一条，偶尔分享分享技术，有时能发发牢骚，希望能让你们在我的技术文章中有所收获。&lt;/p&gt;
 
         
       
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://blog.Dodd2014.com/2019/05/12/hello-world/"/>
-    <id>http://blog.Dodd2014.com/2019/05/12/hello-world/</id>
-    <published>2019-05-12T11:59:00.907Z</published>
-    <updated>2019-05-12T13:25:20.006Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;hljs highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;code class=&quot;hljs bash&quot;&gt;$ hexo new &lt;span class=&quot;hljs-string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
