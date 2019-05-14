@@ -132,7 +132,7 @@
     </script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>Dodd's Blog - Void man(main) without return.</title>
+    <title>Ueditor 跨域的问题研究 | Dodd's Blog - Void man(main) without return.</title>
   </head>
   <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN" data-spy="scroll" data-target=".list-group">
     
@@ -149,7 +149,7 @@
       <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
       <ul id="menu" role="menubar" aria-hidden="false">
         
-        <li role="menuitem"><a href="/" class="current"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
         
         <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
         
@@ -166,62 +166,22 @@
         <div class="main-container">
           <div class="content">
             
-
-<div id="index" class="index page">
-  
-  <article class="article post card" itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://blog.Dodd2014.com/2019/05/12/new-blog/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="Dodd">
-        <meta itemprop="description" content="这里是Dodd的博客，分享技术，分享趣闻，记录生活，记录成长。">
-        <meta itemprop="image" content="/images/avatar.png">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="Dodd's Blog">
-      </span>
-    </div>
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2019/05/12/new-blog/" itemprop="url">新的博客</a>
-      </h1>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-05-12T21:20:51+08:00">2019-05-12 21:20:51</time></span>
-        </span>
-        
-        
-        
-      </div>
-    </header>
-    <main class="post-main" itemprop="articleBody">
-      
-      <p>在某年某月的某一天，你发现了新的世界，欢迎来到我新的个人博客，这里是Dodd，前端咸鱼一条，偶尔分享分享技术，有时能发发牢骚，希望能让你们在我的技术文章中有所收获。</p>
-
-      
-    </main>
-    <footer class="post-footer">
-      
-    </footer>
-  </article>
+<div id="post" class="page">
   
   <article class="article post card" itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
       <link itemprop="mainEntityOfPage" href="http://blog.Dodd2014.com/2017/03/13/ueditor-cross-origin/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="Dodd">
-        <meta itemprop="description" content="这里是Dodd的博客，分享技术，分享趣闻，记录生活，记录成长。">
-        <meta itemprop="image" content="/images/avatar.png">
+       <meta itemprop="name" content="Dodd">
+       <meta itemprop="description" content="这里是Dodd的博客，分享技术，分享趣闻，记录生活，记录成长。">
+       <meta itemprop="image" content="/images/avatar.png">
       </span>
       <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="Dodd's Blog">
+       <meta itemprop="name" content="Dodd's Blog">
       </span>
     </div>
     <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2017/03/13/ueditor-cross-origin/" itemprop="url">Ueditor 跨域的问题研究</a>
-      </h1>
+      <h1 class="post-title" itemprop="name headline">Ueditor 跨域的问题研究</h1>
       <div class="post-meta">
         
         <span class="post-date">
@@ -233,7 +193,6 @@
       </div>
     </header>
     <main class="post-main" itemprop="articleBody">
-      
       <h1 id="Ueditor-跨域的问题研究"><a href="#Ueditor-跨域的问题研究" class="headerlink" title="Ueditor 跨域的问题研究"></a>Ueditor 跨域的问题研究</h1><h3 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h3><p>这段时间在做CMS毕业设计项目，项目是nodejs后台，angular+require前台<br>前后端完全分离，采用ajax来获取数据渲染到前台上，所以前端不用任何后台语言，纯html/css/js，我将前端放在了80端口，后端放在3008端口，实际上属于两个完全不同域名。</p>
 <h3 id="二、问题"><a href="#二、问题" class="headerlink" title="二、问题"></a>二、问题</h3><p>首先是官方没有给nodejs的版本、然后就是这篇文章的主要问题跨域。</p>
 <h3 id="三、解决方案"><a href="#三、解决方案" class="headerlink" title="三、解决方案"></a>三、解决方案</h3><p>UE官方给的源码都是前后端在一起，我下载了一个PHP版本的，文件结构如下：<br><img src="http://img.blog.csdn.net/20170323132937542?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvRG9kZDkxOTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
@@ -263,7 +222,6 @@
 <p>只此，UE的单图和多图上传在前后端完全分离的跨域情况下完全解决，这是我的方案，在nodejs下，同理可以推广到其他后台语言</p>
 <p>PS:ie8下听说会用flash提交图片，我不知道如何让flash提交带上session/cookie，所以可能在ie8下后台会丢失session/cookie，未经测试。</p>
 
-      
     </main>
     <footer class="post-footer">
       
@@ -276,48 +234,19 @@
     </footer>
   </article>
   
-  <article class="article post card" itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://blog.Dodd2014.com/2016/03/20/2016lanqiao/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="Dodd">
-        <meta itemprop="description" content="这里是Dodd的博客，分享技术，分享趣闻，记录生活，记录成长。">
-        <meta itemprop="image" content="/images/avatar.png">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="Dodd's Blog">
-      </span>
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2016/03/20/2016lanqiao/" rel="next" title="2016 第七届蓝桥杯 c/c++ B组省赛真题及解题报告"><i class="fas fa-angle-left"></i><span class="nav-title">2016 第七届蓝桥杯 c/c++ B组省赛真题及解题报告</span></a>
+      
     </div>
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2016/03/20/2016lanqiao/" itemprop="url">2016 第七届蓝桥杯 c/c++ B组省赛真题及解题报告</a>
-      </h1>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2016-03-20T00:00:00+08:00">2016-03-20 00:00:00</time></span>
-        </span>
-        
-        
-        
-      </div>
-    </header>
-    <main class="post-main" itemprop="articleBody">
+    <div class="page-nav-prev page-nav-item">
       
-      <h1 id="2016-第七届蓝桥杯-c-c-B组省赛真题及解题报告"><a href="#2016-第七届蓝桥杯-c-c-B组省赛真题及解题报告" class="headerlink" title="2016 第七届蓝桥杯 c/c++ B组省赛真题及解题报告"></a><strong>2016 第七届蓝桥杯 c/c++ B组省赛真题及解题报告</strong></h1>
+      <a href="/2019/05/12/new-blog/" rel="prev" title="新的博客"><span class="nav-title">新的博客</span><i class="fas fa-angle-right"></i></a>
       
-    </main>
-    <footer class="post-footer">
-      
-      <div class="post-tags">
-        
-        <a class="post-tag button" href="/tags/蓝桥杯/" rel="tag"><i class="fas fa-tags"></i>蓝桥杯</a>
-        
-      </div>
-      
-    </footer>
-  </article>
-  
+    </div>
+  </nav>
   
   
 </div>
@@ -370,6 +299,17 @@
 
 
   <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#Ueditor-跨域的问题研究"><span class="toc-text">Ueditor 跨域的问题研究</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#一、背景"><span class="toc-text">一、背景</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#二、问题"><span class="toc-text">二、问题</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#三、解决方案"><span class="toc-text">三、解决方案</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#a域名后台代码"><span class="toc-text">a域名后台代码:</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#让后我们来说说多图-Orz"><span class="toc-text">让后我们来说说多图 Orz</span></a></li></ol></li></ol></li></ol></div>
+    </div>
+    
     
     
     <hr>
