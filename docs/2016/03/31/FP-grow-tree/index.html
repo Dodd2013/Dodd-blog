@@ -132,7 +132,7 @@
     </script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>归档 | Dodd's Blog - Void man(main) without return.</title>
+    <title>数据挖掘 关联规则的FP-growth-tree（FP增长树）的python实现 使用方法 | Dodd's Blog - Void man(main) without return.</title>
   </head>
   <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN" data-spy="scroll" data-target=".list-group">
     
@@ -151,7 +151,7 @@
         
         <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
         
-        <li role="menuitem"><a href="/archives/" class="current"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
         
         <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
         
@@ -166,82 +166,82 @@
         <div class="main-container">
           <div class="content">
             
-<div id="archive" class="archive page">
-  <h1 class="page-title">归档</h1>
-  <h2 class="page-counter">
-    
-    你已经写了 4 篇文章！
-    
-  </h2>
-  
-  
-  
-  
-  <h2 class="page-title">2019
+<div id="post" class="page">
   
   <article class="article post card" itemscope itemtype="http://schema.org/Article">
-    <header id="post-header" class="post-header">
-      <h1 class="post-title-simple" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2019/05/12/new-blog/" itemprop="url">新的博客</a>
-      </h1>
-      
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2019-05-12T21:20:51+08:00">05-12</time>
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://blog.Dodd2014.com/2016/03/31/FP-grow-tree/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="Dodd">
+       <meta itemprop="description" content="这里是Dodd的博客，分享技术，分享趣闻，记录生活，记录成长。">
+       <meta itemprop="image" content="/images/avatar.png">
       </span>
-      
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="Dodd's Blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">数据挖掘 关联规则的FP-growth-tree（FP增长树）的python实现 使用方法</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2016-03-31T00:00:00+08:00">2016-03-31 00:00:00</time></span>
+        </span>
+        
+        
+        
+      </div>
     </header>
+    <main class="post-main" itemprop="articleBody">
+      <h1 id="数据挖掘-关联规则的-FP-growth-tree（FP-增长树）的-python-实现-使用方法"><a href="#数据挖掘-关联规则的-FP-growth-tree（FP-增长树）的-python-实现-使用方法" class="headerlink" title="数据挖掘 关联规则的 FP-growth-tree（FP 增长树）的 python 实现 使用方法"></a><strong>数据挖掘 关联规则的 FP-growth-tree（FP 增长树）的 python 实现 使用方法</strong></h1><h2 id="代码地址"><a href="#代码地址" class="headerlink" title="代码地址"></a>代码地址</h2><blockquote>
+<p><a href="http://git.oschina.net/Dodd/FP-grow-tree" target="_blank" rel="noopener">点我去找代码</a></p>
+</blockquote>
+<a id="more"></a>
+<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><ol>
+<li>FP_Grow_tree.py :入口类</li>
+<li>fptree.py：构建树的类</li>
+<li>node.py 节点数据结构类</li>
+<li>sample.py：样例类</li>
+<li>tree.py：FP-grow 算法类生成模式基数据集</li>
+<li>unit.py：组合函数和子集函数</li>
+</ol>
+<h2 id="调用方法"><a href="#调用方法" class="headerlink" title="调用方法"></a>调用方法</h2><p>导入 FP_Grow_tree.py 类，下边代码为 sample.py 的实例</p>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#-*- coding:utf-8 –*-</span><br><br><span class="hljs-keyword">import</span> FP_Grow_tree<br>sample=[<br>	[<span class="hljs-string">'milk'</span>,<span class="hljs-string">'eggs'</span>,<span class="hljs-string">'bread'</span>,<span class="hljs-string">'chips'</span>],<br>	[<span class="hljs-string">'eggs'</span>,<span class="hljs-string">'popcorn'</span>,<span class="hljs-string">'chips'</span>,<span class="hljs-string">'beer'</span>],<br>	[<span class="hljs-string">'eggs'</span>,<span class="hljs-string">'bread'</span>,<span class="hljs-string">'chips'</span>],<br>	[<span class="hljs-string">'milk'</span>,<span class="hljs-string">'eggs'</span>,<span class="hljs-string">'bread'</span>,<span class="hljs-string">'popcorn'</span>,<span class="hljs-string">'chips'</span>,<span class="hljs-string">'beer'</span>],<br>	[<span class="hljs-string">'milk'</span>,<span class="hljs-string">'bread'</span>,<span class="hljs-string">'beer'</span>],<br>	[<span class="hljs-string">'eggs'</span>,<span class="hljs-string">'bread'</span>,<span class="hljs-string">'beer'</span>],<br>	[<span class="hljs-string">'milk'</span>,<span class="hljs-string">'bread'</span>,<span class="hljs-string">'chips'</span>],<br>	[<span class="hljs-string">'milk'</span>,<span class="hljs-string">'eggs'</span>,<span class="hljs-string">'bread'</span>,<span class="hljs-string">'butter'</span>,<span class="hljs-string">'chips'</span>],<br>	[<span class="hljs-string">'milk'</span>,<span class="hljs-string">'eggs'</span>,<span class="hljs-string">'butter'</span>,<span class="hljs-string">'chips'</span>]<br>]<br>sample1=[<br>	[<span class="hljs-string">u'牛奶'</span>,<span class="hljs-string">u'鸡蛋'</span>,<span class="hljs-string">u'面包'</span>,<span class="hljs-string">u'薯片'</span>],<br>	[<span class="hljs-string">u'鸡蛋'</span>,<span class="hljs-string">u'爆米花'</span>,<span class="hljs-string">u'薯片'</span>,<span class="hljs-string">u'啤酒'</span>],<br>	[<span class="hljs-string">u'鸡蛋'</span>,<span class="hljs-string">u'面包'</span>,<span class="hljs-string">u'薯片'</span>],<br>	[<span class="hljs-string">u'牛奶'</span>,<span class="hljs-string">u'鸡蛋'</span>,<span class="hljs-string">u'面包'</span>,<span class="hljs-string">u'爆米花'</span>,<span class="hljs-string">u'薯片'</span>,<span class="hljs-string">u'啤酒'</span>],<br>	[<span class="hljs-string">u'牛奶'</span>,<span class="hljs-string">u'面包'</span>,<span class="hljs-string">u'啤酒'</span>],<br>	[<span class="hljs-string">u'鸡蛋'</span>,<span class="hljs-string">u'面包'</span>,<span class="hljs-string">u'啤酒'</span>],<br>	[<span class="hljs-string">u'牛奶'</span>,<span class="hljs-string">u'面包'</span>,<span class="hljs-string">u'薯片'</span>],<br>	[<span class="hljs-string">u'牛奶'</span>,<span class="hljs-string">u'鸡蛋'</span>,<span class="hljs-string">u'面包'</span>,<span class="hljs-string">u'黄油'</span>,<span class="hljs-string">u'薯片'</span>],<br>	[<span class="hljs-string">u'牛奶'</span>,<span class="hljs-string">u'鸡蛋'</span>,<span class="hljs-string">u'黄油'</span>,<span class="hljs-string">u'薯片'</span>]<br>]<br><span class="hljs-comment">#print(sample1)</span><br><span class="hljs-comment">##参数说明 sample为事务数据集 []为递归过程中的基,support为最小支持度</span><br>support=<span class="hljs-number">3</span><br>ff=FP_Grow_tree.FP_Grow_tree(sample1,[],support)<br><span class="hljs-comment">##打印频繁集</span><br>ff.printfrequent()<br></code></pre></td></tr></table></figure>
+<h2 id="依赖环境"><a href="#依赖环境" class="headerlink" title="依赖环境"></a>依赖环境</h2><ol>
+<li>python3.x</li>
+<li>python itertools</li>
+<li>python operator<br>装完 python3.x 好像第二第三都会自带。</li>
+</ol>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>有空实现实现书本上的算法也是极好的，可以锻炼一下能力，渣渣写的很乱，大神看了不要见怪。</p>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/数据挖掘/" rel="tag"><i class="fas fa-tags"></i>数据挖掘</a>
+        
+      </div>
+      
+    </footer>
   </article>
   
   
-  
-  <h2 class="page-title">2017
-  
-  <article class="article post card" itemscope itemtype="http://schema.org/Article">
-    <header id="post-header" class="post-header">
-      <h1 class="post-title-simple" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2017/03/13/ueditor-cross-origin/" itemprop="url">Ueditor 跨域的问题研究</a>
-      </h1>
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
       
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2017-03-13T00:00:00+08:00">03-13</time>
-      </span>
+      <a href="/2016/03/20/2016lanqiao/" rel="next" title="2016 第七届蓝桥杯 c/c++ B组省赛真题及解题报告"><i class="fas fa-angle-left"></i><span class="nav-title">2016 第七届蓝桥杯 c/c++ B组省赛真题及解题报告</span></a>
       
-    </header>
-  </article>
-  
-  
-  
-  <h2 class="page-title">2016
-  
-  <article class="article post card" itemscope itemtype="http://schema.org/Article">
-    <header id="post-header" class="post-header">
-      <h1 class="post-title-simple" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2016/03/31/FP-grow-tree/" itemprop="url">数据挖掘 关联规则的FP-growth-tree（FP增长树）的python实现 使用方法</a>
-      </h1>
+    </div>
+    <div class="page-nav-prev page-nav-item">
       
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2016-03-31T00:00:00+08:00">03-31</time>
-      </span>
+      <a href="/2017/03/13/ueditor-cross-origin/" rel="prev" title="Ueditor 跨域的问题研究"><span class="nav-title">Ueditor 跨域的问题研究</span><i class="fas fa-angle-right"></i></a>
       
-    </header>
-  </article>
+    </div>
+  </nav>
   
   
-  <article class="article post card" itemscope itemtype="http://schema.org/Article">
-    <header id="post-header" class="post-header">
-      <h1 class="post-title-simple" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2016/03/20/2016lanqiao/" itemprop="url">2016 第七届蓝桥杯 c/c++ B组省赛真题及解题报告</a>
-      </h1>
-      
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2016-03-20T00:00:00+08:00">03-20</time>
-      </span>
-      
-    </header>
-  </article>
-  
-  
-</h2></h2></h2></div>
+</div>
 
           </div>
           
@@ -291,6 +291,17 @@
 
 
   <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#数据挖掘-关联规则的-FP-growth-tree（FP-增长树）的-python-实现-使用方法"><span class="toc-text">数据挖掘 关联规则的 FP-growth-tree（FP 增长树）的 python 实现 使用方法</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#代码地址"><span class="toc-text">代码地址</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#目录结构"><span class="toc-text">目录结构</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#调用方法"><span class="toc-text">调用方法</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#依赖环境"><span class="toc-text">依赖环境</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#总结"><span class="toc-text">总结</span></a></li></ol></li></ol></div>
+    </div>
+    
     
     
     <hr>
