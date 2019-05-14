@@ -4,8 +4,6 @@ date: 2016-3-31
 tags: 数据挖掘
 ---
 
-# **数据挖掘 关联规则的 FP-growth-tree（FP 增长树）的 python 实现 使用方法**
-
 ## 代码地址
 
 > [点我去找代码](http://git.oschina.net/Dodd/FP-grow-tree)

@@ -193,7 +193,7 @@
       </div>
     </header>
     <main class="post-main" itemprop="articleBody">
-      <h1 id="Ueditor-跨域的问题研究"><a href="#Ueditor-跨域的问题研究" class="headerlink" title="Ueditor 跨域的问题研究"></a>Ueditor 跨域的问题研究</h1><h3 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h3><p>这段时间在做CMS毕业设计项目，项目是nodejs后台，angular+require前台<br>前后端完全分离，采用ajax来获取数据渲染到前台上，所以前端不用任何后台语言，纯html/css/js，我将前端放在了80端口，后端放在3008端口，实际上属于两个完全不同域名。<br><a id="more"></a></p>
+      <h3 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h3><p>这段时间在做CMS毕业设计项目，项目是nodejs后台，angular+require前台<br>前后端完全分离，采用ajax来获取数据渲染到前台上，所以前端不用任何后台语言，纯html/css/js，我将前端放在了80端口，后端放在3008端口，实际上属于两个完全不同域名。<br><a id="more"></a></p>
 <h3 id="二、问题"><a href="#二、问题" class="headerlink" title="二、问题"></a>二、问题</h3><p>首先是官方没有给nodejs的版本、然后就是这篇文章的主要问题跨域。</p>
 <h3 id="三、解决方案"><a href="#三、解决方案" class="headerlink" title="三、解决方案"></a>三、解决方案</h3><p>UE官方给的源码都是前后端在一起，我下载了一个PHP版本的，文件结构如下：<br><img src="http://img.blog.csdn.net/20170323132937542?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvRG9kZDkxOTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
 <p>其中PHP文件夹是服务端代码，因为我用的node，所以走你~删之~~<br>其余的我们放入前端相关地方，然后引入之即可，需要引入的文件有三</p>
@@ -307,7 +307,7 @@
     <hr>
     <div class="post-toc sidebar-item" id="toc-div">
       <div><i class="fas fa-list-ol"></i>文章目录</div>
-      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#Ueditor-跨域的问题研究"><span class="toc-text">Ueditor 跨域的问题研究</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#一、背景"><span class="toc-text">一、背景</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#二、问题"><span class="toc-text">二、问题</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#三、解决方案"><span class="toc-text">三、解决方案</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#a域名后台代码"><span class="toc-text">a域名后台代码:</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#让后我们来说说多图-Orz"><span class="toc-text">让后我们来说说多图 Orz</span></a></li></ol></li></ol></li></ol></div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#一、背景"><span class="toc-text">一、背景</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#二、问题"><span class="toc-text">二、问题</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#三、解决方案"><span class="toc-text">三、解决方案</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#a域名后台代码"><span class="toc-text">a域名后台代码:</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#让后我们来说说多图-Orz"><span class="toc-text">让后我们来说说多图 Orz</span></a></li></ol></li></ol></div>
     </div>
     
     

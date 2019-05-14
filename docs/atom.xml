@@ -44,11 +44,11 @@
     <link href="http://blog.Dodd2014.com/2017/03/13/ueditor-cross-origin/"/>
     <id>http://blog.Dodd2014.com/2017/03/13/ueditor-cross-origin/</id>
     <published>2017-03-12T16:00:00.000Z</published>
-    <updated>2019-05-14T13:10:26.819Z</updated>
+    <updated>2019-05-14T13:14:13.753Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Ueditor-跨域的问题研究&quot;&gt;&lt;a href=&quot;#Ueditor-跨域的问题研究&quot; class=&quot;headerlink&quot; title=&quot;Ueditor 跨域的问题研究&quot;&gt;&lt;/a&gt;Ueditor 跨域的问题研究&lt;/h1&gt;&lt;h3 id=&quot;一、背景&quot;&gt;&lt;a href=&quot;#一、背景&quot; class=&quot;headerlink&quot; title=&quot;一、背景&quot;&gt;&lt;/a&gt;一、背景&lt;/h3&gt;&lt;p&gt;这段时间在做CMS毕业设计项目，项目是nodejs后台，angular+require前台&lt;br&gt;前后端完全分离，采用ajax来获取数据渲染到前台上，所以前端不用任何后台语言，纯html/css/js，我将前端放在了80端口，后端放在3008端口，实际上属于两个完全不同域名。&lt;br&gt;
+      &lt;h3 id=&quot;一、背景&quot;&gt;&lt;a href=&quot;#一、背景&quot; class=&quot;headerlink&quot; title=&quot;一、背景&quot;&gt;&lt;/a&gt;一、背景&lt;/h3&gt;&lt;p&gt;这段时间在做CMS毕业设计项目，项目是nodejs后台，angular+require前台&lt;br&gt;前后端完全分离，采用ajax来获取数据渲染到前台上，所以前端不用任何后台语言，纯html/css/js，我将前端放在了80端口，后端放在3008端口，实际上属于两个完全不同域名。&lt;br&gt;
     
     </summary>
     
@@ -62,11 +62,11 @@
     <link href="http://blog.Dodd2014.com/2016/03/31/FP-grow-tree/"/>
     <id>http://blog.Dodd2014.com/2016/03/31/FP-grow-tree/</id>
     <published>2016-03-30T16:00:00.000Z</published>
-    <updated>2019-05-14T13:12:20.138Z</updated>
+    <updated>2019-05-14T13:13:53.369Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;数据挖掘-关联规则的-FP-growth-tree（FP-增长树）的-python-实现-使用方法&quot;&gt;&lt;a href=&quot;#数据挖掘-关联规则的-FP-growth-tree（FP-增长树）的-python-实现-使用方法&quot; class=&quot;headerlink&quot; title=&quot;数据挖掘 关联规则的 FP-growth-tree（FP 增长树）的 python 实现 使用方法&quot;&gt;&lt;/a&gt;&lt;strong&gt;数据挖掘 关联规则的 FP-growth-tree（FP 增长树）的 python 实现 使用方法&lt;/strong&gt;&lt;/h1&gt;&lt;h2 id=&quot;代码地址&quot;&gt;&lt;a href=&quot;#代码地址&quot; class=&quot;headerlink&quot; title=&quot;代码地址&quot;&gt;&lt;/a&gt;代码地址&lt;/h2&gt;&lt;blockquote&gt;
+      &lt;h2 id=&quot;代码地址&quot;&gt;&lt;a href=&quot;#代码地址&quot; class=&quot;headerlink&quot; title=&quot;代码地址&quot;&gt;&lt;/a&gt;代码地址&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;http://git.oschina.net/Dodd/FP-grow-tree&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;点我去找代码&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
     
@@ -82,11 +82,13 @@
     <link href="http://blog.Dodd2014.com/2016/03/20/2016lanqiao/"/>
     <id>http://blog.Dodd2014.com/2016/03/20/2016lanqiao/</id>
     <published>2016-03-19T16:00:00.000Z</published>
-    <updated>2019-05-14T12:29:17.037Z</updated>
+    <updated>2019-05-14T13:13:46.782Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;2016-第七届蓝桥杯-c-c-B组省赛真题及解题报告&quot;&gt;&lt;a href=&quot;#2016-第七届蓝桥杯-c-c-B组省赛真题及解题报告&quot; class=&quot;headerlink&quot; title=&quot;2016 第七届蓝桥杯 c/c++ B组省赛真题及解题报告&quot;&gt;&lt;/a&gt;&lt;strong&gt;2016 第七届蓝桥杯 c/c++ B组省赛真题及解题报告&lt;/strong&gt;&lt;/h1&gt;
+      &lt;font color=&quot;red&quot;&gt;勘误1：第6题第4个 if最后一个条件粗心写错了，答案应为1580。条件应为&lt;code&gt;abs(a[3]-a[7])!=1&lt;/code&gt;,宝宝心理苦啊！！感谢zzh童鞋的提醒。&lt;/font&gt;
+
+&lt;p&gt;&lt;font color=&quot;red&quot;&gt;勘误2：第7题在判断连通的时候条件写错了，后两个if条件中是应该是&amp;lt;=12 落了一个等于号，正确答案应为116。&lt;/font&gt;&lt;br&gt;
     
     </summary>
     
