@@ -1,7 +1,7 @@
 ---
 title: Ueditor 跨域的问题研究
 date: 2017-3-13
-tags: 蓝桥杯
+tags: 前端
 ---
 ### 一、背景
 这段时间在做CMS毕业设计项目，项目是nodejs后台，angular+require前台
