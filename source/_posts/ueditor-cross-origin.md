@@ -27,7 +27,7 @@ UE官方给的源码都是前后端在一起，我下载了一个PHP版本的，
 
 但是，图片上传呢，服务端呢，翻了官网插件，哎呦，找到一个[ue for nodejs](https://github.com/netpi/ueditor)果断用之，翻阅其源码，就是处理了一下文件的保存，然后通知前端是否保存成功之类的事情。
 
-```
+```javascript
 var ueditor = require("./ueditor");//注意这里的‘./’ 因为我改了他的代码，所以直接把他的lib/index.js拷出来做为自己的文件用了原版只要直接require("ueditor")就好了(当然前提是你是通过npm install ueditor安装的)
 	app.use("/ue", ueditor(path.join(__dirname, 'public/upload/'), function(req, res, next) {
 		// ueditor 客户发起上传图片请求
@@ -70,7 +70,7 @@ var ueditor = require("./ueditor");//注意这里的‘./’ 因为我改了他�
 坑爹有木有，为了兼容低版本浏览器，单图提交用了iframe，而iframe不支持跨域读取内容，完了，我们的欲望要得不到满足了，(┬＿┬)↘ 跌，但是官方说要发挥想象力，网上就有人说了，**b域名的ue，上传图片到a域名，a域名保存图片成功后，重定向到b域名，在给个参数，b域名后台做处理后在返回就好了。** 坑爹，可是我的项目前端没有后台呀！！！那怎么办，然后我就发挥想象力，想象力你懂得！a域名把消息封装成参数，然后重定向到静态页面，静态页面通过js在body onload的时候把消息写到页面上去，就除了如下两个代码
 #### a域名后台代码:
 
-```
+```javascript
 res.ue_up = function(img_url) {
           var tmpdir = path.join(os.tmpdir(), path.basename(filename));
           var name = snowflake.nextId() + path.extname(tmpdir);
@@ -96,7 +96,7 @@ res.ue_up = function(img_url) {
 
 b域名 ue.html：
 
-```
+```html
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
@@ -125,7 +125,7 @@ b域名 ue.html：
 多图上传的原理官方没有解释，我来解释，多图上传通过弹出一个dialogs来实现各种操作，相关文件都在dialogs里，查看dialogs/image/image.html我们发现上传用了webupload，而webupload是通过自己构建ajax来实现图片上传的，唯一有个问题，就是关于跨域session/cookie的问题，UE和webupload都没有说到，要在image.html文件所引入的image.js文件的365行左右初始化webupload配置的时候加上`withCredentials:true,`参数如下图![这里写图片描述](http://img.blog.csdn.net/20170323142039165?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvRG9kZDkxOTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast) 否则a域名的后台就得不到session了
 当然这里有个小插曲，ajax的跨域需要后台headers配合，下边是我的配置
 
-```
+```javascript
 app.use('/', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", config.cros==="*"?req.headers.origin:config.cros);
     res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
@@ -140,7 +140,7 @@ app.use('/', function(req, res, next) {
 ![这里写图片描述](http://img.blog.csdn.net/20170323142912253?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvRG9kZDkxOTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 什么鬼，跨域访问不允许重定向，我**，单图要重定向，多图ajax不能重定向，算了，只能在后台判断一下是不是ajax，
 
-```
+```javascript
 if (req.xhr||req.headers['x_requested_with']==='XMLHttpRequest') {
                 res.jsonp(obj);//如果是ajax则直接jsonp
               } else {
