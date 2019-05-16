@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+xmlns:mobile="http://www.baidu.com/schemas/sitemap-mobile/1/">
+<url>
+ <loc>https://blog.dodd2014.com</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-05-16</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>https://blog.dodd2014.com/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-05-16</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>https://blog.dodd2014.com/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-05-16</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>https://blog.dodd2014.com/archives/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-05-16</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>https://blog.dodd2014.com/tags/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-05-16</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>https://blog.dodd2014.com/2019/05/12/new-blog/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-05-16</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>https://blog.dodd2014.com/2017/03/13/ueditor-cross-origin/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-05-16</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>https://blog.dodd2014.com/tags/前端/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-05-16</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>https://blog.dodd2014.com/2016/03/31/fp-grow-tree/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-05-16</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>https://blog.dodd2014.com/tags/数据挖掘/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-05-16</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>https://blog.dodd2014.com/2016/03/20/2016lanqiao/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-05-16</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>https://blog.dodd2014.com/tags/蓝桥杯/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-05-16</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>https://blog.dodd2014.com/archives/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-05-16</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>https://blog.dodd2014.com/tags/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-05-16</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>https://blog.dodd2014.com/atom.xml</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-05-16</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>https://github.com/dodd2013</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-05-16</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+</urlset>

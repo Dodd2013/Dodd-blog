@@ -11,4 +11,4 @@ Disallow: /css/
 Disallow: /fonts/
 Disallow: /vendors/
 
-Sitemap: https://blog.dodd2013.com/atom.xml
+Sitemap: https://blog.dodd2014.com/atom.xml
