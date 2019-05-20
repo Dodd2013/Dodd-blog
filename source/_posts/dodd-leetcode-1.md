@@ -1,6 +1,5 @@
 ---
 title: LeetCode 01 两数之和 - Dodd带你用JS刷LeetCode系列
-date: 2019-5-20
 tags: LeetCode
 ---
 
