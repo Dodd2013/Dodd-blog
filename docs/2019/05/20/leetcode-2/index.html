@@ -133,7 +133,7 @@
     </script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>标签 | Dodd's Blog - Void man(main) without return.</title>
+    <title>LeetCode 02 两数相加 - Dodd带你用JS刷LeetCode系列 | Dodd's Blog - Void man(main) without return.</title>
   </head>
   <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN" data-spy="scroll" data-target=".list-group">
     
@@ -154,7 +154,7 @@
         
         <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
         
-        <li role="menuitem"><a href="/tags/" class="current"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
         
       </ul>
     </nav>
@@ -167,23 +167,65 @@
         <div class="main-container">
           <div class="content">
             
-<div id="tags" class="tags page">
-  <article class="article post card">
+<div id="post" class="page">
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://blog.Dodd2014.com/2019/05/20/leetcode-2/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="Dodd">
+       <meta itemprop="description" content="这里是Dodd的博客，分享技术，分享趣闻，记录生活，记录成长。">
+       <meta itemprop="image" content="/images/avatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="Dodd's Blog">
+      </span>
+    </div>
     <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">标签</h1>
-    </header>
-    <main class="post-main">
-      <h2 class="page-counter">
+      <h1 class="post-title" itemprop="name headline">LeetCode 02 两数相加 - Dodd带你用JS刷LeetCode系列</h1>
+      <div class="post-meta">
         
-        你已经创建了 4 个标签！
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-05-20T00:00:00+08:00">2019-05-20 00:00:00</time></span>
+        </span>
         
-      </h2>
-      <div class="tags-cloud">
-        <a href="/tags/LeetCode/" style="font-size: 32px; color: #111">LeetCode</a> <a href="/tags/前端/" style="font-size: 16px; color: #777">前端</a> <a href="/tags/数据挖掘/" style="font-size: 16px; color: #777">数据挖掘</a> <a href="/tags/蓝桥杯/" style="font-size: 16px; color: #777">蓝桥杯</a>
+        
+        
       </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路:"></a>解题思路:</h2><p>链表型大数模拟相加，记住不能直接转换数字相加后再转换回来，应该会溢出(我没有试~逃.jpg), 通过率比较低的原因可能还有就是忘记了最后一位的进位</p>
+<a id="more"></a>
+<h2 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h2><p><a href="https://leetcode.com/problems/add-two-numbers/" target="_blank" rel="noopener">英文</a> <a href="https://leetcode-cn.com/problems/add-two-numbers/" target="_blank" rel="noopener">中文</a></p>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><figure class="hljs highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">/**<br> * Definition for singly-linked list.<br> * function ListNode(val) &#123;<br> *     this.val = val;<br> *     this.next = null;<br> * &#125;<br> */</span><br><br><span class="hljs-comment">/**<br> * @param &#123;ListNode&#125; l1<br> * @param &#123;ListNode&#125; l2<br> * @return &#123;ListNode&#125;<br> */</span><br><span class="hljs-keyword">var</span> addTwoNumbers = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">l1, l2</span>) </span>&#123;<br>  <span class="hljs-keyword">let</span> head = <span class="hljs-keyword">new</span> ListNode();<br>  <span class="hljs-keyword">let</span> overflow = <span class="hljs-number">0</span>;<br>  <span class="hljs-keyword">let</span> cur = head;<br>  <span class="hljs-comment">// Don't forget overflow here!!!!!</span><br>  <span class="hljs-keyword">while</span> (l1 || l2 || overflow) &#123;<br>    cur.next = <span class="hljs-keyword">new</span> ListNode(<span class="hljs-number">0</span>);<br>    cur = cur.next;<br>    <span class="hljs-keyword">if</span> (l1) &#123;<br>      cur.val += l1.val;<br>      l1 = l1.next;<br>    &#125;<br>    <span class="hljs-keyword">if</span> (l2) &#123;<br>      cur.val += l2.val;<br>      l2 = l2.next;<br>    &#125;<br>    cur.val += overflow;<br>    <span class="hljs-keyword">if</span> (cur.val &gt; <span class="hljs-number">9</span>) &#123;<br>      cur.val -= <span class="hljs-number">10</span>;<br>      overflow = <span class="hljs-number">1</span>;<br>    &#125; <span class="hljs-keyword">else</span> &#123;<br>      overflow = <span class="hljs-number">0</span>;<br>    &#125;<br>  &#125;<br>  <span class="hljs-keyword">return</span> head.next;<br>&#125;;<br><span class="hljs-comment">// test case</span><br><span class="hljs-comment">// function ListNode(val) &#123;</span><br><span class="hljs-comment">//   this.val = val;</span><br><span class="hljs-comment">//   this.next = null;</span><br><span class="hljs-comment">// &#125;</span><br><span class="hljs-comment">// let l1 = new ListNode(5);</span><br><span class="hljs-comment">// l1.next = new ListNode(5);</span><br><span class="hljs-comment">// l1.next.next = new ListNode(5);</span><br><span class="hljs-comment">// let l2 = new ListNode(5);</span><br><span class="hljs-comment">// l2.next = new ListNode(5);</span><br><span class="hljs-comment">// l2.next.next = new ListNode(5);</span><br><br><span class="hljs-comment">// let l3 = addTwoNumbers(l1, l2);</span><br><span class="hljs-comment">// while (l3) &#123;</span><br><span class="hljs-comment">//   console.log(l3.val + "-&gt;");</span><br><span class="hljs-comment">//   l3 = l3.next;</span><br><span class="hljs-comment">// &#125;</span><br></code></pre></td></tr></table></figure>
+
     </main>
-    <footer class="post-footer"></footer>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/LeetCode/" rel="tag"><i class="fas fa-tags"></i>LeetCode</a>
+        
+      </div>
+      
+    </footer>
   </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2019/05/12/new-blog/" rel="next" title="新的博客"><i class="fas fa-angle-left"></i><span class="nav-title">新的博客</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2019/05/20/dodd-leetcode-1/" rel="prev" title="LeetCode 01 两数之和 - Dodd带你用JS刷LeetCode系列"><span class="nav-title">LeetCode 01 两数之和 - Dodd带你用JS刷LeetCode系列</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
 </div>
 
           </div>
@@ -234,6 +276,17 @@
 
 
   <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#解题思路"><span class="toc-text">解题思路:</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#题目链接"><span class="toc-text">题目链接</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#题解"><span class="toc-text">题解</span></a></li></ol></div>
+    </div>
+    
     
     
     <hr>

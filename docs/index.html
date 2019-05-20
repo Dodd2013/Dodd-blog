@@ -199,9 +199,48 @@
     <main class="post-main" itemprop="articleBody">
       
       <h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路:"></a>解题思路:</h2><p>这个题给出一个数组和一个数 sum，要求从数组中找出两个数之和为 sum，遍历一遍数组，同时维护出现过的数字的 map(value 为其 index)和当前数字需要互补的数字即可。</p>
-<h2 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h2><p><a href="https://leetcode.com/problems/two-sum/" target="_blank" rel="noopener">英文</a> <a href="https://leetcode-cn.com/problems/two-sum/" target="_blank" rel="noopener">中文</a></p>
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><figure class="hljs highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">/**<br> * @param &#123;number[]&#125; nums<br> * @param &#123;number&#125; target<br> * @return &#123;number[]&#125;<br> */</span><br><span class="hljs-keyword">const</span> twoSum = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">nums, target</span>) </span>&#123;<br>  <span class="hljs-keyword">const</span> map = &#123;&#125;;<br>  <span class="hljs-keyword">let</span> res;<br>  nums.forEach(<span class="hljs-function">(<span class="hljs-params">num, index</span>) =&gt;</span> &#123;<br>    <span class="hljs-keyword">if</span> (map[num] !== <span class="hljs-literal">undefined</span>) &#123;<br>      res = [map[num], index];<br>      <span class="hljs-keyword">return</span>;<br>    &#125; <span class="hljs-keyword">else</span> &#123;<br>      map[target - num] = index;<br>    &#125;<br>  &#125;);<br>  <span class="hljs-keyword">return</span> res;<br>&#125;;<br></code></pre></td></tr></table></figure>
-
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/LeetCode/" rel="tag"><i class="fas fa-tags"></i>LeetCode</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://blog.Dodd2014.com/2019/05/20/leetcode-2/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="Dodd">
+        <meta itemprop="description" content="这里是Dodd的博客，分享技术，分享趣闻，记录生活，记录成长。">
+        <meta itemprop="image" content="/images/avatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Dodd's Blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2019/05/20/leetcode-2/" itemprop="url">LeetCode 02 两数相加 - Dodd带你用JS刷LeetCode系列</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-05-20T00:00:00+08:00">2019-05-20 00:00:00</time></span>
+        </span>
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      <h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路:"></a>解题思路:</h2><p>链表型大数模拟相加，记住不能直接转换数字相加后再转换回来，应该会溢出(我没有试~逃.jpg), 通过率比较低的原因可能还有就是忘记了最后一位的进位</p>
       
     </main>
     <footer class="post-footer">
@@ -413,7 +452,7 @@
     
     <div class="archives-count count-block">
       <div class="site-count-title">归档</div>
-      <div><a href="/archives/">5</a></div>
+      <div><a href="/archives/">6</a></div>
     </div>
     
     

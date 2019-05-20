@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.Dodd2014.com/"/>
-  <updated>2019-05-20T13:03:16.985Z</updated>
+  <updated>2019-05-20T13:39:23.288Z</updated>
   <id>http://blog.Dodd2014.com/</id>
   
   <author>
@@ -21,17 +21,29 @@
     <link href="http://blog.Dodd2014.com/2019/05/20/dodd-leetcode-1/"/>
     <id>http://blog.Dodd2014.com/2019/05/20/dodd-leetcode-1/</id>
     <published>2019-05-19T16:00:00.000Z</published>
-    <updated>2019-05-20T13:03:16.985Z</updated>
+    <updated>2019-05-20T13:39:23.288Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;解题思路&quot;&gt;&lt;a href=&quot;#解题思路&quot; class=&quot;headerlink&quot; title=&quot;解题思路:&quot;&gt;&lt;/a&gt;解题思路:&lt;/h2&gt;&lt;p&gt;这个题给出一个数组和一个数 sum，要求从数组中找出两个数之和为 sum，遍历一遍数组，同时维护出现过的数字的
-        
-      
+      &lt;h2 id=&quot;解题思路&quot;&gt;&lt;a href=&quot;#解题思路&quot; class=&quot;headerlink&quot; title=&quot;解题思路:&quot;&gt;&lt;/a&gt;解题思路:&lt;/h2&gt;&lt;p&gt;这个题给出一个数组和一个数 sum，要求从数组中找出两个数之和为 sum，遍历一遍数组，同时维护出现过的数字的 map(value 为其 index)和当前数字需要互补的数字即可。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="LeetCode" scheme="http://blog.Dodd2014.com/tags/LeetCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode 02 两数相加 - Dodd带你用JS刷LeetCode系列</title>
+    <link href="http://blog.Dodd2014.com/2019/05/20/leetcode-2/"/>
+    <id>http://blog.Dodd2014.com/2019/05/20/leetcode-2/</id>
+    <published>2019-05-19T16:00:00.000Z</published>
+    <updated>2019-05-20T13:42:49.153Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;解题思路&quot;&gt;&lt;a href=&quot;#解题思路&quot; class=&quot;headerlink&quot; title=&quot;解题思路:&quot;&gt;&lt;/a&gt;解题思路:&lt;/h2&gt;&lt;p&gt;链表型大数模拟相加，记住不能直接转换数字相加后再转换回来，应该会溢出(我没有试~逃.jpg), 通过率比较低的原因可能还有就是忘记了最后一位的进位&lt;/p&gt;
     
     </summary>
     

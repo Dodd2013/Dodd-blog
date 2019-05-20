@@ -8,6 +8,7 @@ tags: LeetCode
 
 这个题给出一个数组和一个数 sum，要求从数组中找出两个数之和为 sum，遍历一遍数组，同时维护出现过的数字的 map(value 为其 index)和当前数字需要互补的数字即可。
 
+<!-- more -->
 ## 题目链接
 
 [英文](https://leetcode.com/problems/two-sum/) [中文](https://leetcode-cn.com/problems/two-sum/)
