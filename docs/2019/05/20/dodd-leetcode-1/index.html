@@ -133,7 +133,7 @@
     </script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>Dodd's Blog - Void man(main) without return.</title>
+    <title>LeetCode 01 两数之和 - Dodd带你用JS刷LeetCode系列 | Dodd's Blog - Void man(main) without return.</title>
   </head>
   <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN" data-spy="scroll" data-target=".list-group">
     
@@ -150,7 +150,7 @@
       <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
       <ul id="menu" role="menubar" aria-hidden="false">
         
-        <li role="menuitem"><a href="/" class="current"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
         
         <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
         
@@ -167,25 +167,22 @@
         <div class="main-container">
           <div class="content">
             
-
-<div id="index" class="index page">
+<div id="post" class="page">
   
   <article class="article post card" itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
       <link itemprop="mainEntityOfPage" href="http://blog.Dodd2014.com/2019/05/20/dodd-leetcode-1/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="Dodd">
-        <meta itemprop="description" content="这里是Dodd的博客，分享技术，分享趣闻，记录生活，记录成长。">
-        <meta itemprop="image" content="/images/avatar.png">
+       <meta itemprop="name" content="Dodd">
+       <meta itemprop="description" content="这里是Dodd的博客，分享技术，分享趣闻，记录生活，记录成长。">
+       <meta itemprop="image" content="/images/avatar.png">
       </span>
       <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="Dodd's Blog">
+       <meta itemprop="name" content="Dodd's Blog">
       </span>
     </div>
     <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2019/05/20/dodd-leetcode-1/" itemprop="url">LeetCode 01 两数之和 - Dodd带你用JS刷LeetCode系列</a>
-      </h1>
+      <h1 class="post-title" itemprop="name headline">LeetCode 01 两数之和 - Dodd带你用JS刷LeetCode系列</h1>
       <div class="post-meta">
         
         <span class="post-date">
@@ -197,12 +194,10 @@
       </div>
     </header>
     <main class="post-main" itemprop="articleBody">
-      
       <h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路:"></a>解题思路:</h2><p>这个题给出一个数组和一个数 sum，要求从数组中找出两个数之和为 sum，遍历一遍数组，同时维护出现过的数字的 map(value 为其 index)和当前数字需要互补的数字即可。</p>
 <h2 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h2><p><a href="https://leetcode.com/problems/two-sum/" target="_blank" rel="noopener">英文</a> <a href="https://leetcode-cn.com/problems/two-sum/" target="_blank" rel="noopener">中文</a></p>
 <h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><figure class="hljs highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">/**<br> * @param &#123;number[]&#125; nums<br> * @param &#123;number&#125; target<br> * @return &#123;number[]&#125;<br> */</span><br><span class="hljs-keyword">const</span> twoSum = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">nums, target</span>) </span>&#123;<br>  <span class="hljs-keyword">const</span> map = &#123;&#125;;<br>  <span class="hljs-keyword">let</span> res;<br>  nums.forEach(<span class="hljs-function">(<span class="hljs-params">num, index</span>) =&gt;</span> &#123;<br>    <span class="hljs-keyword">if</span> (map[num] !== <span class="hljs-literal">undefined</span>) &#123;<br>      res = [map[num], index];<br>      <span class="hljs-keyword">return</span>;<br>    &#125; <span class="hljs-keyword">else</span> &#123;<br>      map[target - num] = index;<br>    &#125;<br>  &#125;);<br>  <span class="hljs-keyword">return</span> res;<br>&#125;;<br></code></pre></td></tr></table></figure>
 
-      
     </main>
     <footer class="post-footer">
       
@@ -215,173 +210,17 @@
     </footer>
   </article>
   
-  <article class="article post card" itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://blog.Dodd2014.com/2019/05/12/new-blog/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="Dodd">
-        <meta itemprop="description" content="这里是Dodd的博客，分享技术，分享趣闻，记录生活，记录成长。">
-        <meta itemprop="image" content="/images/avatar.png">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="Dodd's Blog">
-      </span>
-    </div>
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2019/05/12/new-blog/" itemprop="url">新的博客</a>
-      </h1>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-05-12T21:20:51+08:00">2019-05-12 21:20:51</time></span>
-        </span>
-        
-        
-        
-      </div>
-    </header>
-    <main class="post-main" itemprop="articleBody">
-      
-      <p>在某年某月的某一天，你发现了新的世界，欢迎来到我新的个人博客，这里是Dodd，前端咸鱼一条，偶尔分享分享技术，有时能发发牢骚，希望能让你们在我的技术文章中有所收获。</p>
-
-      
-    </main>
-    <footer class="post-footer">
-      
-    </footer>
-  </article>
   
-  <article class="article post card" itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://blog.Dodd2014.com/2017/03/13/ueditor-cross-origin/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="Dodd">
-        <meta itemprop="description" content="这里是Dodd的博客，分享技术，分享趣闻，记录生活，记录成长。">
-        <meta itemprop="image" content="/images/avatar.png">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="Dodd's Blog">
-      </span>
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2019/05/12/new-blog/" rel="next" title="新的博客"><i class="fas fa-angle-left"></i><span class="nav-title">新的博客</span></a>
+      
     </div>
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2017/03/13/ueditor-cross-origin/" itemprop="url">Ueditor 跨域的问题研究</a>
-      </h1>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2017-03-13T00:00:00+08:00">2017-03-13 00:00:00</time></span>
-        </span>
-        
-        
-        
-      </div>
-    </header>
-    <main class="post-main" itemprop="articleBody">
+    <div class="page-nav-prev page-nav-item">
       
-      <h3 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h3><p>这段时间在做CMS毕业设计项目，项目是nodejs后台，angular+require前台<br>前后端完全分离，采用ajax来获取数据渲染到前台上，所以前端不用任何后台语言，纯html/css/js，我将前端放在了80端口，后端放在3008端口，实际上属于两个完全不同域名。<br>
-      
-    </p></main>
-    <footer class="post-footer">
-      
-      <div class="post-tags">
-        
-        <a class="post-tag button" href="/tags/前端/" rel="tag"><i class="fas fa-tags"></i>前端</a>
-        
-      </div>
-      
-    </footer>
-  </article>
-  
-  <article class="article post card" itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://blog.Dodd2014.com/2016/03/31/FP-grow-tree/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="Dodd">
-        <meta itemprop="description" content="这里是Dodd的博客，分享技术，分享趣闻，记录生活，记录成长。">
-        <meta itemprop="image" content="/images/avatar.png">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="Dodd's Blog">
-      </span>
     </div>
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2016/03/31/FP-grow-tree/" itemprop="url">数据挖掘 关联规则的FP-growth-tree（FP增长树）的python实现 使用方法</a>
-      </h1>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2016-03-31T00:00:00+08:00">2016-03-31 00:00:00</time></span>
-        </span>
-        
-        
-        
-      </div>
-    </header>
-    <main class="post-main" itemprop="articleBody">
-      
-      <h2 id="代码地址"><a href="#代码地址" class="headerlink" title="代码地址"></a>代码地址</h2><blockquote>
-<p><a href="http://git.oschina.net/Dodd/FP-grow-tree" target="_blank" rel="noopener">点我去找代码</a></p>
-</blockquote>
-      
-    </main>
-    <footer class="post-footer">
-      
-      <div class="post-tags">
-        
-        <a class="post-tag button" href="/tags/数据挖掘/" rel="tag"><i class="fas fa-tags"></i>数据挖掘</a>
-        
-      </div>
-      
-    </footer>
-  </article>
-  
-  <article class="article post card" itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://blog.Dodd2014.com/2016/03/20/2016lanqiao/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="Dodd">
-        <meta itemprop="description" content="这里是Dodd的博客，分享技术，分享趣闻，记录生活，记录成长。">
-        <meta itemprop="image" content="/images/avatar.png">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="Dodd's Blog">
-      </span>
-    </div>
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2016/03/20/2016lanqiao/" itemprop="url">2016 第七届蓝桥杯 c/c++ B组省赛真题及解题报告</a>
-      </h1>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2016-03-20T00:00:00+08:00">2016-03-20 00:00:00</time></span>
-        </span>
-        
-        
-        
-      </div>
-    </header>
-    <main class="post-main" itemprop="articleBody">
-      
-      <font color="red">勘误1：第6题第4个 if最后一个条件粗心写错了，答案应为1580。条件应为<code>abs(a[3]-a[7])!=1</code>,宝宝心理苦啊！！感谢zzh童鞋的提醒。</font>
-
-<p><font color="red">勘误2：第7题在判断连通的时候条件写错了，后两个if条件中是应该是&lt;=12 落了一个等于号，正确答案应为116。</font><br>
-      
-    </p></main>
-    <footer class="post-footer">
-      
-      <div class="post-tags">
-        
-        <a class="post-tag button" href="/tags/蓝桥杯/" rel="tag"><i class="fas fa-tags"></i>蓝桥杯</a>
-        
-      </div>
-      
-    </footer>
-  </article>
-  
+  </nav>
   
   
 </div>
@@ -434,6 +273,17 @@
 
 
   <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#解题思路"><span class="toc-text">解题思路:</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#题目链接"><span class="toc-text">题目链接</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#题解"><span class="toc-text">题解</span></a></li></ol></div>
+    </div>
+    
     
     
     <hr>
