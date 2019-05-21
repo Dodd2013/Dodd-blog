@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.Dodd2014.com/"/>
-  <updated>2019-05-20T13:45:06.885Z</updated>
+  <updated>2019-05-21T13:58:09.063Z</updated>
   <id>http://blog.Dodd2014.com/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LeetCode 03 无重复字符的最长子串 - Dodd带你用JS刷LeetCode系列</title>
+    <link href="http://blog.Dodd2014.com/2019/05/21/leetcode-3/"/>
+    <id>http://blog.Dodd2014.com/2019/05/21/leetcode-3/</id>
+    <published>2019-05-21T13:49:39.552Z</published>
+    <updated>2019-05-21T13:58:09.063Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;解题思路&quot;&gt;&lt;a href=&quot;#解题思路&quot; class=&quot;headerlink&quot; title=&quot;解题思路:&quot;&gt;&lt;/a&gt;解题思路:&lt;/h2&gt;&lt;p&gt;类似 kmp 和一些字符串算法，使用滑动窗口记录最大不重复的子串，枚举目标子串的头(i)尾(j)坐标，用一个 object 标记出现过的字符位置，当 j+1 没有出现在 object 中时 j++，反之设 i 为出现过字符的那个位置+1，记录过程中最大值，注意边界即可。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="LeetCode" scheme="http://blog.Dodd2014.com/tags/LeetCode/"/>
+    
+  </entry>
   
   <entry>
     <title>LeetCode 02 两数相加 - Dodd带你用JS刷LeetCode系列</title>

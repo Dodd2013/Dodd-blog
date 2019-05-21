@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>LeetCode 03 无重复字符的最长子串 - Dodd带你用JS刷LeetCode系列</title>
+      <link href="/2019/05/21/leetcode-3/"/>
+      <url>/2019/05/21/leetcode-3/</url>
+      
+        <content type="html"><![CDATA[<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路:"></a>解题思路:</h2><p>类似 kmp 和一些字符串算法，使用滑动窗口记录最大不重复的子串，枚举目标子串的头(i)尾(j)坐标，用一个 object 标记出现过的字符位置，当 j+1 没有出现在 object 中时 j++，反之设 i 为出现过字符的那个位置+1，记录过程中最大值，注意边界即可。</p><a id="more"></a><h2 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h2><p><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/" target="_blank" rel="noopener">英文</a> <a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/" target="_blank" rel="noopener">中文</a></p><h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><figure class="hljs highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">/**<br> * @param &#123;string&#125; s<br> * @return &#123;number&#125;<br> */</span><br><span class="hljs-keyword">var</span> lengthOfLongestSubstring = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">s</span>) </span>&#123;<br>  <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>,<br>    j = <span class="hljs-number">0</span>,<br>    map = &#123; [s[<span class="hljs-number">0</span>]]: <span class="hljs-number">0</span> &#125;,<br>    len = s.length,<br>    res = <span class="hljs-number">0</span>,<br>    index;<br>  <span class="hljs-keyword">while</span> (i &lt; len &amp;&amp; j &lt; len) &#123;<br>    <span class="hljs-keyword">if</span> (res &lt; j - i + <span class="hljs-number">1</span>) &#123;<br>      res = j - i + <span class="hljs-number">1</span>;<br>    &#125;<br>    index = map[s[++j]];<br>    <span class="hljs-keyword">if</span> (index &gt;= i) &#123;<br>      i = index + <span class="hljs-number">1</span>;<br>    &#125;<br>    map[s[j]] = j;<br>  &#125;<br>  <span class="hljs-keyword">return</span> res;<br>&#125;;<br></code></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> LeetCode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>LeetCode 02 两数相加 - Dodd带你用JS刷LeetCode系列</title>
       <link href="/2019/05/20/leetcode-2/"/>
       <url>/2019/05/20/leetcode-2/</url>
