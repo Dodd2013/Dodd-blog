@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.Dodd2014.com/"/>
-  <updated>2019-05-27T16:28:33.178Z</updated>
+  <updated>2019-05-27T16:33:15.102Z</updated>
   <id>http://blog.Dodd2014.com/</id>
   
   <author>
@@ -21,11 +21,11 @@
     <link href="http://blog.Dodd2014.com/2019/05/28/leetcode-952/"/>
     <id>http://blog.Dodd2014.com/2019/05/28/leetcode-952/</id>
     <published>2019-05-27T16:17:21.093Z</published>
-    <updated>2019-05-27T16:28:33.178Z</updated>
+    <updated>2019-05-27T16:33:15.102Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;解题思路&quot;&gt;&lt;a href=&quot;#解题思路&quot; class=&quot;headerlink&quot; title=&quot;解题思路:&quot;&gt;&lt;/a&gt;解题思路:&lt;/h2&gt;&lt;p&gt;这个题用最大公约数去循环暴力并查集会超时，所以可以先用素数筛筛出范围以内所有素数(leetcode的test case有bug，看代码注释),利用素数来做并查集，合并的同时记录数的个数count，注意合并的时候个数也要合并。&lt;/p&gt;
+      &lt;h2 id=&quot;解题思路&quot;&gt;&lt;a href=&quot;#解题思路&quot; class=&quot;headerlink&quot; title=&quot;解题思路:&quot;&gt;&lt;/a&gt;解题思路:&lt;/h2&gt;&lt;p&gt;这个题用最大公约数去循环暴力并查集会超时，所以可以先用素数筛筛出范围以内所有素数,利用素数来做并查集，合并的同时记录数的个数 count，注意合并的时候计数器中的计数也要合并。&lt;/p&gt;
     
     </summary>
     

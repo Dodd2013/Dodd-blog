@@ -5,7 +5,7 @@ tags: LeetCode
 
 ## 解题思路:
 
-这个题用最大公约数去循环暴力并查集会超时，所以可以先用素数筛筛出范围以内所有素数(leetcode的test case有bug，看代码注释),利用素数来做并查集，合并的同时记录数的个数count，注意合并的时候个数也要合并。
+这个题用最大公约数去循环暴力并查集会超时，所以可以先用素数筛筛出范围以内所有素数,利用素数来做并查集，合并的同时记录数的个数 count，注意合并的时候计数器中的计数也要合并。
 
 <!-- more -->
 
@@ -25,7 +25,7 @@ var largestComponentSize = function(A) {
   let group = [];
   let su = [false, false];
   let suArray = [];
-  let maxNum = 100000;
+  let maxNum = 50000; //这个地方由于是素数并且题目说数字各不相同，减半为50000就可以了
   let count = {};
   // 素数筛法，筛出素数数组suArray
   for (let i = 2; i <= maxNum; i++) {
@@ -114,5 +114,4 @@ var largestComponentSize = function(A) {
 
 // test case
 console.log(largestComponentSize([20, 50, 9, 63]));
-
 ```
